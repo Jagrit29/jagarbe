@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+body
+{
+	height:100%;
+   width:100%;
+   background-image:url(front_page.jpg);/*your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;/*this sets the image to fullscreen covering the whole screen*/  
+   /*css hack for ie*/     
+}
+	a:link
+	 {
+    color:White; 
+    background-color: transparent; 
+    text-decoration: none;
+    font-size:25px;
+    font-family:Courier;
+    text-shadow:2px 2px black ;
+    
+    }
+    a:hover {
+    color:white;
+    background-color: transparent;
+    text-decoration: underline;
+    }
+    a:visited
+    {
+    	color:white;
+    }
+    <style> 
+
+#toppanel,#bottompanel,#footwearpanel {
+    padding: 5px;
+    background-color: grey;
+    border: solid 1px grey;
+}
+
+#toppanel ,#bottompanel,#footwearpanel{
+    padding: 60px;
+    display:none;
+    text-align:center;
+    padding: 5px;
+    background-color: white;
+    border: solid 1px #c3c3c3;
+    border-radius:5px;
+}
+</style>
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+    $("#a1").hover(function(){
+        $("#toppanel").show();
+    },function()
+    {
+        $("#toppanel").hide();
+    });
+    $("#a2").hover(function(){
+        $("#bottompanel").show();
+    },function()
+    {
+        $("#bottompanel").hide();
+    });
+$("#a3").hover(function(){
+        $("#footwearpanel").show();
+    },function()
+    {
+        $("#footwearpanel").hide();
+    });
+
+});
+    
+</script>
+</head>
+<body>
+<a href="top.html" target="_self" id="a1" style="margin-left:2%">Topwear</a>
+<a href="bottom.html" target="_self" id="a2" style="margin-left:3%">Bottomwear</a>
+<a href="footwear.html" target="_self" id="a3" style="margin-left:3%">Footwear</a>
+<!--<a href="accessories.html" target="_self" id="l1">Accessories</a>-->
+<a href="aboutus.html" target="_self" id="l1" style="margin-left:3%">About us</a>
+<a href="login.html" target="_self" id="l1" align="right" style="margin-left:40%;"><font color="Black">Login<font></a>
+<div id="toppanel" style="float:left;width:8%;height:9%;margin-top:0.1%;margin-left:1.4%;font-size:17px;"><font color="red" ><strong><em> Shirts</br>Tshirts</br>Sweatshirts</br>Jackets</font></em></strong></div>
+<div id="bottompanel" style="float:left;width:8%;height:9%;margin-top:0.1%;margin-left:13.5%;font-size:18px;"><font color="red" ><strong><em>Jeans</br>Joggers</br>Cargos</font></em></strong></div>
+<div id="footwearpanel" style="float:left;width:8%;height:9%;margin-top:0.1%;margin-left:26%;font-size:18px;"><font color="red" ><strong><em>Sneakers</br></br>Flip-Flops</font></em></strong></div>
+<div style="float:right;width:42%;margin-top:190px;">
+<h3 style="font-size:125px;font-family:'Palatino';color:#C41B2D;text-shadow:4px 4px #C0C5C6 ;">JaGarbe<h3>
+<!--<p id="namepanel" style="font-size:18px;margin-left:68%;"><font color="red" ><strong>Men's Fashion Website</font></strong></p>-->
+</br>
+</div>
+
+</body>
+</html>

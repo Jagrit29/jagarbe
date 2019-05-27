@@ -1,0 +1,87 @@
+<html>
+<head>
+
+<style>
+body
+{
+	background-image:url(login.jpg);
+	background-size:cover;
+	background-position:center;
+}
+	.login-page
+	{
+		width:300px;
+				margin:2% 0% 0% 40%;
+						padding: 10% 0 0;
+	}
+	.form
+	{
+		position:relative;
+		z-index:1;
+		background:;
+		text-align:center;
+		padding:45px;
+		border-radius:10px;
+	}
+	.form input
+	{
+		font-family:"Roboto",sans-serif;
+		outline:1;
+		background:#F2F2F2;
+		width:170px;
+		height:40px;
+		padding:30px;
+		margin: 0 auto 14px;
+	}
+	.form button
+	{
+		</br>
+		font-family:"Roboto",sans-serif;
+		text-transform:uppercase;
+		outline:0;
+		background:#4CAF50;
+		border:1;
+		border-radius:5px;
+		padding:3px;
+		width:170px;
+		margin-top:5%;
+		margin-bottom:0;
+		height:40px;
+	}
+</style>
+<script>
+function validateForm()
+{
+	var x=document.forms["regForm"]["name"].value;
+	if(x=="")
+	{
+		alert("Enter Name First");
+	}
+	var y=document.forms["regForm"]["password"].value;
+	if(y=="")
+	{
+		alert("Enter Password");
+	}
+	var z=document.forms["regForm"]["email"].value;
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(z.value)) 
+    {
+    alert("Please provide a valid email address");
+    z.focus;
+    return false;
+    }
+
+}
+</script>
+</head>
+<body>
+
+<div class="login-page">
+<div class="form">
+<form class="register-form" id="regForm" onsubmit="return validateForm()" method="post">
+<input type="text" placeholder="Name" id="name"/>
+<input type="password" placeholder="Password" id="password"/>
+<input type="text" placeholder="Email Id" id="email"/>
+<button id="b">Register</button
+</html>
